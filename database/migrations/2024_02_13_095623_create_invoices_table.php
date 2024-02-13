@@ -19,7 +19,9 @@ return new class extends Migration
             $table->date('due_date');
             $table->string('reference')->nullable();
             $table->text('terms_and_conditions');
-
+            $table->double('sub_total');
+            $table->double('discount')->default(0);
+            $table->double('total');
             $table->timestamps();
         });
     }
